@@ -105,6 +105,12 @@ class STP_API ObjectGroup : public MapObject {
     ////////////////////////////////////////////////////////////
     void SetOpacity(float opacity);
 
+    ///////////////////////////////////////////////////////////
+    /// \brief GetObjects written by oawad79
+    /// \return
+    ///////////////////////////////////////////////////////////
+    std::vector<tmx::ObjectGroup::Object> &GetObjects();
+
  private:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
@@ -148,6 +154,18 @@ class STP_API ObjectGroup::Object : public sf::Drawable, public tmx::Properties 
     ///
     ////////////////////////////////////////////////////////////
     void SetColor(const sf::Color& color);
+
+    ///////////////////////////////////////////////////////////
+    /// \brief GetX All Getters added by oawad
+    /// \return
+    ///////////////////////////////////////////////////////////
+    int GetX();
+    int GetY();
+    int GetWidth();
+    int GetHeight();
+    std::string GetName();
+    std::string GetType();
+    float GetRotation();
 
  private:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const;

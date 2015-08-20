@@ -76,6 +76,11 @@ void ObjectGroup::draw(sf::RenderTarget& target, sf::RenderStates states) const 
     }
 }
 
+std::vector<tmx::ObjectGroup::Object> &ObjectGroup::GetObjects() {
+    return objects_;
+}
+
+
 ////////////////////////////////////////////////////////////
 // ObjectGroup::Object implementation
 ////////////////////////////////////////////////////////////
@@ -161,6 +166,34 @@ void ObjectGroup::Object::draw(sf::RenderTarget& target, sf::RenderStates states
             target.draw(&vertices_[0], vertices_.size(), sf::LinesStrip);
         }
     }
+}
+
+nt ObjectGroup::Object::GetX() {
+    return x_;
+}
+
+int ObjectGroup::Object::GetY() {
+    return y_;
+}
+
+int ObjectGroup::Object::GetWidth() {
+    return width_;
+}
+
+int ObjectGroup::Object::GetHeight() {
+    return height_;
+}
+
+std::string ObjectGroup::Object::GetName() {
+    return name_;
+}
+
+std::string ObjectGroup::Object::GetType() {
+    return type_;
+}
+
+float ObjectGroup::Object::GetRotation() {
+    return rotation_;
 }
 
 }  // namespace tmx
