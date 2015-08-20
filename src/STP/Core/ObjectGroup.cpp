@@ -168,7 +168,7 @@ void ObjectGroup::Object::draw(sf::RenderTarget& target, sf::RenderStates states
     }
 }
 
-nt ObjectGroup::Object::GetX() {
+int ObjectGroup::Object::GetX() {
     return x_;
 }
 
